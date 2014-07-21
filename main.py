@@ -7,7 +7,6 @@ import datetime
 class MainHandler(webapp2.RequestHandler):
     def get(self):
         url = "https://www.kimonolabs.com/api/8mjgyceu?apikey=5YBvcrTB43XXYfhpnXPneBlxTg2lpH4p"
-        client = memcache.Client()
         date = datetime.datetime.now()
         memcache_key = date.strftime('%Y%m%d')
         try:
